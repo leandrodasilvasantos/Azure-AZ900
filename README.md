@@ -65,3 +65,73 @@ Azure tem poder de manutenção, ambiente confiável, se algo der errado, o sist
 6. **Segurança →** A nuvem oferece ferramentas de segurança que atende às necessidades dos clientes, mas é importante lembrar que a IMPLEMENTAÇÃO DE MUITAS DELAS DEVEM SER REALIZADAS PELO CLIENTE.
 
 7. **Gerenciamento →** Capacidade de setar escalabilidade e outras características como segurança e fatores de previsibilidade.
+
+
+## 4. Tipos de Serviço de Nuvem
+
+---
+
+→ **IaaS (Infraestrutura como Serviço)**
+
+Eu (cliente) me envolvo mais com o sistema, exemplo quando eu crio uma maquina virtual, temos que organizar muita configurações, depois de ligada, temos que ir monitorando a máquina virtual. Esse modelo de infraestrutura como serviço podemos ter mais liberdade para trabalhar.
+
+Criamos uma infraestrutura de Ti de pagamento conforme o uso alugando:
+
+- Virtual Machines
+- Armazenamento
+- Redes
+- Sistemas operacionais
+
+De um provedor de nuvem.
+
+É a categoria mais flexível. Você aluga a infraestrutura de TI (servidores e máquinas virtuais, armazenamento, redes) de um provedor de nuvem em um modelo pré-pago.
+
+- **O que o Azure gerencia:** Apenas o hardware físico (datacenters, eletricidade, refrigeração) e a virtualização.
+- **O que VOCÊ gerencia:** Tudo o que está dentro da máquina. O sistema operacional (Windows/Linux), as atualizações (patches), o middleware, o runtime, os dados e a aplicação.
+- **Quando usar:**
+    - Migrações "Lift and shift" (tirar do on-premise e jogar na nuvem sem alterar o código).
+    - Quando você precisa de controle total sobre o sistema operacional.
+    - Para ambientes de teste e desenvolvimento rápidos.
+- **Exemplos no Azure:**
+    - **Azure Virtual Machines (VMs)**
+    - **Azure Virtual Networks (VNETs)**
+    - **Azure Disk Storage**
+
+> Analogia: É como alugar um lote vazio. O proprietário garante que o terreno existe e tem acesso à rua, mas você precisa construir a casa, instalar a encanação, pintar as paredes e decorar.
+> 
+
+**→ PaaS (Plataform as a service)**
+
+Fornece um ambiente para a criação, teste e implantação de aplicativos de software, sem focar no gerenciamento da infraestrutura.
+
+Projetado para desenvolvedores. O Azure fornece um ambiente para criar, testar e implantar aplicativos de software sem que você precise se preocupar com a configuração ou gerenciamento da infraestrutura subjacente (servidores, armazenamento, rede, banco de dados).
+
+- **O que o Azure gerencia:** Hardware, virtualização, **Sistema Operacional**, middleware e runtime. O Azure cuida dos patches de segurança do Windows/Linux automaticamente.
+- **O que VOCÊ gerencia:** Apenas os **aplicativos** (código) e os **dados**.
+- **Quando usar:**
+    - Desenvolvimento de novas aplicações web ou mobile.
+    - Quando você não quer perder tempo configurando servidores ou atualizando o Windows.
+    - Para usar recursos como Serverless ou Bancos de Dados gerenciados.
+- **Exemplos no Azure:**
+    - **Azure App Service** (para hospedar sites).
+    - **Azure SQL Database** (banco de dados gerenciado).
+    - **Azure Functions** (computação serverless).
+
+> Analogia: É como alugar um quarto de hotel. A estrutura, a limpeza, a manutenção elétrica e a mobília são problemas do hotel. Você só precisa levar suas malas (código) e viver lá.
+> 
+
+→ **SaaS (Software as a Service)**
+
+Os usuários se conectam e usam aplicativos com base em nuvem pela internet, exemplo Office 365.
+
+É o software fornecido pela internet. É uma solução completa e pronta para uso. A maioria das aplicações SaaS que usamos no dia a dia roda na nuvem.
+
+- **O que o Azure/Microsoft gerencia:** **Tudo**. Do hardware até o código da aplicação.
+- **O que VOCÊ gerencia:** Apenas a configuração, o acesso dos usuários e os dados que você coloca lá.
+- **Quando usar:**
+    - Para funções de negócios padrão (e-mail, colaboração, CRM).
+    - Quando você quer uma solução pronta "out-of-the-box".
+- **Exemplos no ecossistema Microsoft:**
+    - **Microsoft 365** (Office, Outlook, Teams).
+    - **Dynamics 365**.
+    - **OneDrive**.
